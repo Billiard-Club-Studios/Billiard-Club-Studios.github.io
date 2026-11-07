@@ -124,3 +124,11 @@ body.legal .links { margin-top: var(--row); }
 
 /* R3: home title in the three ball colours (9 yellow, 7 blue, 0 red); home only, same glyphs and positions */
 h1 .t9 { color: var(--yellow); } h1 .t7 { color: var(--blue); } h1 .t0 { color: var(--red); }
+
+/* k (Factive privacy draft page only): dash bullets and inline links in the 36-column text. Nothing above changes. */
+.bl { list-style: none; margin: 0; }
+.bl.gap { margin-bottom: var(--row); }
+.bl li { position: relative; padding-left: calc(var(--c) * 2); }
+.bl li::before { content: "-"; position: absolute; left: 0; color: var(--white); }
+.l a { color: var(--cyan); text-decoration: none; }
+@media (max-width: 971px) { .bl.gap { margin-bottom: calc(var(--lh) * 1); } }
